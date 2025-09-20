@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
+import os
 
-BACKEND_URL = "http://${backend_alb_dns}"  # replace with backend ALB DNS
+BACKEND_URL = os.getenv("BACKEND_URL")
 
 st.title("Frontend (Streamlit)")
 
